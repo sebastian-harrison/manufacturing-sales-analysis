@@ -65,19 +65,12 @@ and all four independent CSV sources. Open it in Tableau Desktop to interact wit
 
 <a href="reports/images/tableau-sales-decline-and-item-drivers.png"><img src="reports/images/tableau-sales-decline-and-item-drivers.png" width="900" alt="Tableau dashboard with company sales comparison, monthly sales, contributors, sales-change components and comparable-item coverage"></a>
 
-Compare 2012, 2013 or 2014 with the preceding year. Choose thickness, item or colour
-contributors. Thickness and colour filters affect the monthly chart only.
-
 </details>
 
 <details>
 <summary><strong>Account Review Priorities — view dashboard</strong></summary>
 
 <a href="reports/images/tableau-account-review-priorities.png"><img src="reports/images/tableau-account-review-priorities.png" width="900" alt="Native Tableau dashboard with concentration, selected-account history and eight default priority-review accounts for 2014"></a>
-
-Switch between prior-year top-ten losses and the largest 15 losses. Select an
-account to update its history; company shares still include all accounts.
-Clearing retains the last selected account.
 
 </details>
 
