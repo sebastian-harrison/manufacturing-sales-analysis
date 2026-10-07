@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="376" viewBox="0 0 1000 376" role="img" aria-labelledby="title description">
+<title id="title">2014 sales-loss review priorities</title>
+<desc id="description">Account losses in USD millions at fixed 2014 exchange rates: Queensway: 4.05, P.G.N: 2.13, Asaba: 2.04, Borno: 1.58. Source thickness losses: 0.55: 4.62, 0.45: 4.28, 0.42: 4.06.</desc>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="32" y="38" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#243746" text-anchor="start">2014 sales-loss review priorities</text>
+<text x="32" y="68" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="start">2014 vs 2013 | Loss magnitudes in $ millions</text>
+<line x1="32" y1="86" x2="968" y2="86" stroke="#E4EBEF" stroke-width="1"/>
+<text x="32" y="120" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#243746" text-anchor="start">Four accounts: 76.9% of net decline</text>
+<text x="542" y="120" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#243746" text-anchor="start">Thickness losses: 101.6% of net decline</text>
+<text x="32" y="149" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="start">Company net loss: $12.75 million</text>
+<text x="542" y="149" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="start">Other specifications provide offsets</text>
+<text x="32" y="206" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">Queensway</text>
+<rect x="154.00" y="188.00" width="235.18" height="26.00" rx="2" fill="#C67724"/>
+<text x="400.1803620427427" y="208" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$4.05</text>
+<text x="32" y="250" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">P.G.N</text>
+<rect x="154.00" y="232.00" width="123.67" height="26.00" rx="2" fill="#C67724"/>
+<text x="288.6707658723438" y="252" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$2.13</text>
+<text x="32" y="294" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">Asaba</text>
+<rect x="154.00" y="276.00" width="118.42" height="26.00" rx="2" fill="#C67724"/>
+<text x="283.41898483453184" y="296" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$2.04</text>
+<text x="32" y="338" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">Borno</text>
+<rect x="154.00" y="320.00" width="91.47" height="26.00" rx="2" fill="#C67724"/>
+<text x="256.47441839847386" y="340" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$1.58</text>
+<text x="542" y="206" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">0.55</text>
+<rect x="616.00" y="188.00" width="268.12" height="26.00" rx="2" fill="#C67724"/>
+<text x="895.1233220340431" y="208" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$4.62</text>
+<text x="542" y="250" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">0.45</text>
+<rect x="616.00" y="232.00" width="248.18" height="26.00" rx="2" fill="#C67724"/>
+<text x="875.1838929042121" y="252" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$4.28</text>
+<text x="542" y="294" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#243746" text-anchor="start">0.42</text>
+<rect x="616.00" y="276.00" width="235.53" height="26.00" rx="2" fill="#C67724"/>
+<text x="862.5263260041337" y="296" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="start">$4.06</text>
+<text x="542" y="349" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#466F8F" text-anchor="start">P.G.N: $2.73 million of the 0.42 loss</text>
+</svg>

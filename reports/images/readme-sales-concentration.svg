@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="530" viewBox="0 0 1000 530" role="img" aria-labelledby="title description">
+<title id="title">Sales contracted while customer concentration increased</title>
+<desc id="description">Annual reported sales in USD millions at fixed 2014 exchange rates, assuming source NGN: 2011: 80.66, 2012: 66.73, 2013: 60.30, 2014: 47.54. Annually ranked top-five customer share: 2011: 75.7%, 2012: 77.7%, 2013: 80.7%, 2014: 81.4%.</desc>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="32" y="38" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#243746" text-anchor="start">Sales contracted while customer concentration increased</text>
+<text x="32" y="68" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="start">2011-2014 | Reported sales and customer concentration</text>
+<line x1="32" y1="86" x2="968" y2="86" stroke="#E4EBEF" stroke-width="1"/>
+<text x="32" y="123" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#243746" text-anchor="start">Reported sales</text>
+<text x="32" y="149" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="start">USD millions</text>
+<text x="542" y="123" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#243746" text-anchor="start">Top-five customer share</text>
+<text x="542" y="149" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="start">Annually ranked; full company denominator</text>
+<line x1="86" y1="405.0" x2="456" y2="405.0" stroke="#E4EBEF" stroke-width="1"/>
+<text x="73" y="411.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">0</text>
+<line x1="86" y1="343.6111111111111" x2="456" y2="343.6111111111111" stroke="#E4EBEF" stroke-width="1"/>
+<text x="73" y="349.6111111111111" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">25</text>
+<line x1="86" y1="282.22222222222223" x2="456" y2="282.22222222222223" stroke="#E4EBEF" stroke-width="1"/>
+<text x="73" y="288.22222222222223" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">50</text>
+<line x1="86" y1="220.83333333333331" x2="456" y2="220.83333333333331" stroke="#E4EBEF" stroke-width="1"/>
+<text x="73" y="226.83333333333331" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">75</text>
+<rect x="106.00" y="206.95" width="54.00" height="198.05" rx="0" fill="#AAC1D1"/>
+<text x="133" y="194.94518229373247" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">$80.66</text>
+<text x="133" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2011</text>
+<rect x="196.00" y="241.14" width="54.00" height="163.86" rx="0" fill="#AAC1D1"/>
+<text x="223" y="229.13722820191316" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">$66.73</text>
+<text x="223" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2012</text>
+<rect x="286.00" y="256.94" width="54.00" height="148.06" rx="0" fill="#AAC1D1"/>
+<text x="313" y="244.93885330159515" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">$60.30</text>
+<text x="313" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2013</text>
+<rect x="376.00" y="288.26" width="54.00" height="116.74" rx="0" fill="#466F8F"/>
+<text x="403" y="276.2584686594961" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">$47.54</text>
+<text x="403" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2014</text>
+<text x="86" y="474" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#C67724" text-anchor="start">2014 vs 2013: -21.2%</text>
+<text x="86" y="500" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" fill="#61717D" text-anchor="start">2011 to 2014: -41.1%</text>
+<line x1="580" y1="405.0" x2="968" y2="405.0" stroke="#E4EBEF" stroke-width="1"/>
+<text x="567" y="411.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">0%</text>
+<line x1="580" y1="349.75" x2="968" y2="349.75" stroke="#E4EBEF" stroke-width="1"/>
+<text x="567" y="355.75" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">25%</text>
+<line x1="580" y1="294.5" x2="968" y2="294.5" stroke="#E4EBEF" stroke-width="1"/>
+<text x="567" y="300.5" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">50%</text>
+<line x1="580" y1="239.25" x2="968" y2="239.25" stroke="#E4EBEF" stroke-width="1"/>
+<text x="567" y="245.25" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">75%</text>
+<line x1="580" y1="184.0" x2="968" y2="184.0" stroke="#E4EBEF" stroke-width="1"/>
+<text x="567" y="190.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#61717D" text-anchor="end">100%</text>
+<rect x="612.00" y="184.00" width="54.00" height="221.00" rx="0" fill="#F3F6F8"/>
+<rect x="612.00" y="237.69" width="54.00" height="167.31" rx="0" fill="#466F8F"/>
+<text x="639" y="225.69490587990936" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">75.7%</text>
+<text x="639" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2011</text>
+<rect x="702.00" y="184.00" width="54.00" height="221.00" rx="0" fill="#F3F6F8"/>
+<rect x="702.00" y="233.19" width="54.00" height="171.81" rx="0" fill="#466F8F"/>
+<text x="729" y="221.19163383949618" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">77.7%</text>
+<text x="729" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2012</text>
+<rect x="792.00" y="184.00" width="54.00" height="221.00" rx="0" fill="#F3F6F8"/>
+<rect x="792.00" y="226.74" width="54.00" height="178.26" rx="0" fill="#466F8F"/>
+<text x="819" y="214.7383766295062" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">80.7%</text>
+<text x="819" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2013</text>
+<rect x="882.00" y="184.00" width="54.00" height="221.00" rx="0" fill="#F3F6F8"/>
+<rect x="882.00" y="225.14" width="54.00" height="179.86" rx="0" fill="#466F8F"/>
+<text x="909" y="213.1425547903267" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#243746" text-anchor="middle">81.4%</text>
+<text x="909" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#243746" text-anchor="middle">2014</text>
+<text x="580" y="474" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#466F8F" text-anchor="start">Top-five share: +5.7 percentage points</text>
+<text x="580" y="500" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" fill="#61717D" text-anchor="start">Top-five sales: $61.06 to $38.69 million</text>
+</svg>

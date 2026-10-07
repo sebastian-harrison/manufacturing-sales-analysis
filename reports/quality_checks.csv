@@ -1,0 +1,49 @@
+phase,check_name,actual_value,expected_rule,status,severity
+ingestion,stage1_preparation_passed,PASS,PASS,PASS,critical
+ingestion,validated_prepared_checksum,c11d452a928381d5c58c4176dfd18fcc18b8e2df430784452d173e00d888c253,c11d452a928381d5c58c4176dfd18fcc18b8e2df430784452d173e00d888c253,PASS,critical
+ingestion,calendar_and_scope_fields,0,0,PASS,critical
+ingestion,corrected_dates,25945,25945,PASS,critical
+ingestion,date_normalization_rules,0,0,PASS,critical
+ingestion,dates_resolved,0,0,PASS,critical
+ingestion,identifiers_present,0,0,PASS,critical
+ingestion,lineage_and_decimal_scale_preserved,0,0,PASS,critical
+ingestion,positive_quantity_nonnegative_sales_price,0,0,PASS,critical
+ingestion,prepared_text_sql_rows,77895,77895,PASS,critical
+ingestion,primary_customer_codes,84,84,PASS,critical
+ingestion,primary_item_codes,762,762,PASS,critical
+ingestion,primary_observed_months,48,48; not proof of complete capture,PASS,critical
+ingestion,primary_rows,62005,62005,PASS,critical
+ingestion,sales_price_quantity_arithmetic,0,0 over 0.01 source units,PASS,critical
+ingestion,source_prepared_sql_rows,77895,77895,PASS,critical
+ingestion,source_prepared_sql_sales,51108696919.32,51108696919.32,PASS,critical
+ingestion,unique_source_row_ids,77895,77895,PASS,critical
+analysis,account_grid_rows,336,336,PASS,critical
+analysis,account_sales_and_shares,0,0,PASS,critical
+analysis,account_summary_keys,0,0,PASS,critical
+analysis,bridge_included_sales,0,0 differences; omitted zero-sales lines carry zero sales,PASS,critical
+analysis,bridge_item_keys_unique,0,0,PASS,critical
+analysis,bridge_prior_current_coverage,0,0 invalid coverage values,PASS,critical
+analysis,company_month_totals,40466669051.82,40466669051.82,PASS,critical
+analysis,company_year_totals,40466669051.82,40466669051.82,PASS,critical
+analysis,concentration_numerators,0,0,PASS,critical
+analysis,customer_thickness_changes_reconcile,0,0 failed annual joint-breakdown totals,PASS,critical
+analysis,customer_thickness_keys_unique,0,0,PASS,critical
+analysis,full_bridge_all_scenarios,0.00000040,<= 0.01 per comparison/scenario,PASS,critical
+analysis,full_contribution_comparisons,12,12 (4 dimensions x 3 comparisons),PASS,critical
+analysis,full_contribution_reconciliation,0,0 failed dimension/comparison totals,PASS,critical
+analysis,full_driver_keys_unique,0,0,PASS,critical
+analysis,matched_item_effects,0.00000008,<= 0.01 per matched key,PASS,critical
+analysis,metadata_join_rows,62005,62005,PASS,critical
+analysis,metadata_join_sales,40466669051.82,40466669051.82,PASS,critical
+analysis,percentage_zero_missing_baseline,0,0,PASS,critical
+analysis,priority_rule,0,0,PASS,critical
+interpretation,quantity_units_unverified,No source unit-of-measure field,Conditional within-item bridge; no cross-item quantity or blended-price KPI,LIMITATION,interpretation
+analysis,ranked_comparison_count,12,12,PASS,critical
+analysis,ranked_driver_keys_unique,0,0,PASS,critical
+analysis,ranked_other_reconciliation,0,0 failed dimension/comparison totals,PASS,critical
+analysis,tableau_bridge_component_sum,0.00000034,<= 0.01,PASS,critical
+analysis,tableau_bridge_grain,15,15 (5 components x 3 comparisons),PASS,critical
+exports,account_summary_export_exact,0,0 typed row/value differences,PASS,critical
+exports,price_quantity_export_exact,0,0 typed row/value differences,PASS,critical
+exports,revenue_driver_export_exact,0,0 typed row/value differences,PASS,critical
+exports,sales_lines_export_exact,0,0 row/value differences after typed round trip,PASS,critical

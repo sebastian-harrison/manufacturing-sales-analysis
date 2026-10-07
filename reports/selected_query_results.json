@@ -1,0 +1,740 @@
+{
+  "four_largest_account_losses_2014": {
+    "query": "SELECT year,customer_code,customer_display_name,prior_sales,current_sales,sales_change,contribution_to_net_change_ratio,prior_revenue_rank FROM account_year_summary WHERE year=2014 AND all_account_loss_rank<=4 ORDER BY all_account_loss_rank",
+    "results": [
+      {
+        "year": 2014,
+        "customer_code": "CIQ0001",
+        "customer_display_name": "Queensway Aluminium Co.Ltd",
+        "prior_sales": "2572926935.00",
+        "current_sales": "1930022320.00",
+        "sales_change": "-642904615.00",
+        "contribution_to_net_change_ratio": 0.31791162248363014,
+        "prior_revenue_rank": 1
+      },
+      {
+        "year": 2014,
+        "customer_code": "CIP0001",
+        "customer_display_name": "P.G.N Limited",
+        "prior_sales": "1611275602.00",
+        "current_sales": "1273201005.00",
+        "sales_change": "-338074597.00",
+        "contribution_to_net_change_ratio": 0.16717541163204963,
+        "prior_revenue_rank": 3
+      },
+      {
+        "year": 2014,
+        "customer_code": "CIA0013",
+        "customer_display_name": "Asaba Aluminium Company",
+        "prior_sales": "1394613600.50",
+        "current_sales": "1070895620.00",
+        "sales_change": "-323717980.50",
+        "contribution_to_net_change_ratio": 0.16007616994300022,
+        "prior_revenue_rank": 4
+      },
+      {
+        "year": 2014,
+        "customer_code": "CIB0004",
+        "customer_display_name": "Borno Aluminium Company Ltd",
+        "prior_sales": "425857049.00",
+        "current_sales": "175796520.00",
+        "sales_change": "-250060529.00",
+        "contribution_to_net_change_ratio": 0.12365309975804863,
+        "prior_revenue_rank": 6
+      }
+    ]
+  },
+  "three_thickness_losses_2014": {
+    "query": "SELECT contributor_key,prior_sales,current_sales,sales_change,contribution_to_net_change_ratio FROM revenue_drivers_full WHERE current_year=2014 AND contributor_type='thickness' AND contributor_key IN ('0.55','0.45','0.42') ORDER BY sales_change",
+    "results": [
+      {
+        "contributor_key": "0.55",
+        "prior_sales": "2836839503.98",
+        "current_sales": "2103879831.55",
+        "sales_change": "-732959672.43",
+        "contribution_to_net_change_ratio": 0.3624431886793834
+      },
+      {
+        "contributor_key": "0.45",
+        "prior_sales": "2702367447.30",
+        "current_sales": "2023915519.04",
+        "sales_change": "-678451928.26",
+        "contribution_to_net_change_ratio": 0.3354895084868601
+      },
+      {
+        "contributor_key": "0.42",
+        "prior_sales": "1499673550.00",
+        "current_sales": "855823185.00",
+        "sales_change": "-643850365.00",
+        "contribution_to_net_change_ratio": 0.3183792889304854
+      }
+    ]
+  },
+  "company_endpoints": {
+    "query": "SELECT * FROM company_year WHERE year IN (2011,2014) ORDER BY year",
+    "results": [
+      {
+        "year": 2011,
+        "company_sales": "12788191442.50",
+        "source_lines": 19691,
+        "observed_customers": 48,
+        "observed_items": 325,
+        "observed_months": 12
+      },
+      {
+        "year": 2014,
+        "company_sales": "7537877994.40",
+        "source_lines": 12669,
+        "observed_customers": 37,
+        "observed_items": 307,
+        "observed_months": 12
+      }
+    ]
+  },
+  "decline_endpoints": {
+    "query": "SELECT (b.company_sales-a.company_sales) AS sales_change,(b.company_sales-a.company_sales)/a.company_sales AS change_ratio FROM company_year a CROSS JOIN company_year b WHERE a.year=2011 AND b.year=2014",
+    "results": [
+      {
+        "sales_change": "-5250313448.10",
+        "change_ratio": -0.41055949715072465
+      }
+    ]
+  },
+  "h1_h2_2014": {
+    "query": "SELECT (b.q1_sales+b.q2_sales)/(a.q1_sales+a.q2_sales)-1 AS h1_change_ratio,(b.q3_sales+b.q4_sales)/(a.q3_sales+a.q4_sales)-1 AS h2_change_ratio,b.december_sales/a.december_sales-1 AS december_change_ratio,(b.december_sales-a.december_sales)/(b.company_sales-a.company_sales) AS december_share_of_annual_change FROM period_coverage_diagnostic a CROSS JOIN period_coverage_diagnostic b WHERE a.year=2013 AND b.year=2014",
+    "results": [
+      {
+        "h1_change_ratio": 0.04591251056322232,
+        "h2_change_ratio": -0.464746758208056,
+        "december_change_ratio": -0.8932411824940034,
+        "december_share_of_annual_change": 0.2781633840823183
+      }
+    ]
+  },
+  "jan_nov_endpoints": {
+    "query": "SELECT b.jan_nov_sales/a.jan_nov_sales-1 AS jan_nov_2011_2014_change FROM period_coverage_diagnostic a CROSS JOIN period_coverage_diagnostic b WHERE a.year=2011 AND b.year=2014",
+    "results": [
+      {
+        "jan_nov_2011_2014_change": -0.37439572560722834
+      }
+    ]
+  },
+  "spec_042_pgn": {
+    "query": "SELECT t.customer_code,t.customer_display_name,t.sales_change,d.sales_change AS specification_change,t.sales_change/d.sales_change AS share_of_specification_net_change FROM customer_thickness_changes t JOIN revenue_drivers_full d ON d.current_year=t.current_year AND d.contributor_type='thickness' AND d.contributor_key=t.thickness_code WHERE t.current_year=2014 AND t.thickness_code='0.42' AND t.customer_code='CIP0001'",
+    "results": [
+      {
+        "customer_code": "CIP0001",
+        "customer_display_name": "P.G.N Limited",
+        "sales_change": "-432933100.00",
+        "specification_change": "-643850365.00",
+        "share_of_specification_net_change": 0.6724126031985709
+      }
+    ]
+  },
+  "top_four_account_share": {
+    "query": "SELECT sum(sales_change) AS four_account_change,max(company_sales_change) AS company_change,sum(sales_change)/max(company_sales_change) AS share_of_company_net_decline FROM account_year_summary WHERE year=2014 AND all_account_loss_rank<=4",
+    "results": [
+      {
+        "four_account_change": "-1554757721.50",
+        "company_change": "-2022274649.72",
+        "share_of_company_net_decline": 0.7688163038167286
+      }
+    ]
+  },
+  "top_three_spec_share": {
+    "query": "SELECT sum(sales_change) AS three_spec_change,max(company_sales_change) AS company_change,sum(sales_change)/max(company_sales_change) AS share_of_company_net_decline FROM revenue_drivers_full WHERE current_year=2014 AND contributor_type='thickness' AND contributor_key IN ('0.55','0.45','0.42')",
+    "results": [
+      {
+        "three_spec_change": "-2055261965.69",
+        "company_change": "-2022274649.72",
+        "share_of_company_net_decline": 1.016311986096729
+      }
+    ]
+  },
+  "major_review_coverage": {
+    "query": "SELECT year,count(*) AS accounts,sum(sales_change) AS loss,sum(sales_change)/max(company_sales_change) AS share_of_company_net_change FROM account_review_priorities GROUP BY year ORDER BY year",
+    "results": [
+      {
+        "year": 2012,
+        "accounts": 8,
+        "loss": "-2193694691.56",
+        "share_of_company_net_change": 0.9936361384571009
+      },
+      {
+        "year": 2013,
+        "accounts": 9,
+        "loss": "-1203393566.92",
+        "share_of_company_net_change": 1.1794572756626005
+      },
+      {
+        "year": 2014,
+        "accounts": 8,
+        "loss": "-1933182717.55",
+        "share_of_company_net_change": 0.9559446921898884
+      }
+    ]
+  },
+  "concentration": {
+    "query": "SELECT * FROM concentration_year ORDER BY year",
+    "results": [
+      {
+        "year": 2011,
+        "company_sales": "12788191442.50",
+        "top_one_sales": "2544710482.00",
+        "top_five_sales": "9681129289.20",
+        "top_one_share": 0.1989890825017652,
+        "top_five_share": 0.7570366249777857,
+        "top_five_codes": "CIQ0001, CIP0001, CIA0013, CIT0005, CIB0004"
+      },
+      {
+        "year": 2012,
+        "company_sales": "10580446970.80",
+        "top_one_sales": "2263021360.00",
+        "top_five_sales": "8225381481.00",
+        "top_one_share": 0.2138871227506271,
+        "top_five_share": 0.7774134215407413,
+        "top_five_codes": "CIQ0001, CIT0005, CIA0013, CIP0001, CIB0004"
+      },
+      {
+        "year": 2013,
+        "company_sales": "9560152644.12",
+        "top_one_sales": "2572926935.00",
+        "top_five_sales": "7711349909.55",
+        "top_one_share": 0.2691303194392493,
+        "top_five_share": 0.8066136804094742,
+        "top_five_codes": "CIQ0001, CIT0005, CIP0001, CIA0013, CIT0008"
+      },
+      {
+        "year": 2014,
+        "company_sales": "7537877994.40",
+        "top_one_sales": "1930022320.00",
+        "top_five_sales": "6134585875.00",
+        "top_one_share": 0.2560431890027727,
+        "top_five_share": 0.813834593708929,
+        "top_five_codes": "CIQ0001, CIT0005, CIP0001, CIA0013, CIT0008"
+      }
+    ]
+  },
+  "fixed_cohort": {
+    "query": "SELECT * FROM concentration_fixed_cohort ORDER BY year",
+    "results": [
+      {
+        "year": 2011,
+        "fixed_2011_top_five_sales": "9681129289.20",
+        "fixed_2011_top_five_share": 0.7570366249777857,
+        "company_sales": "12788191442.50"
+      },
+      {
+        "year": 2012,
+        "fixed_2011_top_five_sales": "8225381481.00",
+        "fixed_2011_top_five_share": 0.7774134215407413,
+        "company_sales": "10580446970.80"
+      },
+      {
+        "year": 2013,
+        "fixed_2011_top_five_sales": "7672190256.55",
+        "fixed_2011_top_five_share": 0.8025175477996999,
+        "company_sales": "9560152644.12"
+      },
+      {
+        "year": 2014,
+        "fixed_2011_top_five_sales": "5931384355.00",
+        "fixed_2011_top_five_share": 0.7868772032933556,
+        "company_sales": "7537877994.40"
+      }
+    ]
+  },
+  "bridge": {
+    "query": "SELECT * FROM bridge_summary ORDER BY current_year,scenario",
+    "results": [
+      {
+        "scenario": "base_item",
+        "prior_year": 2011,
+        "current_year": 2012,
+        "comparison_label": "2012 vs 2011",
+        "matched_key_count": 210,
+        "current_only_key_count": 152,
+        "prior_only_key_count": 115,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "12358175452.80",
+        "matched_current_sales": "9246494164.04",
+        "quantity_effect": "-3260122770.02610080",
+        "realized_price_effect": "148441481.26610046",
+        "current_only_sales": "1333952806.76",
+        "prior_only_sales_effect": "-430015989.70",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "12788191442.50",
+        "included_current_sales": "10580446970.80",
+        "company_prior_sales": "12788191442.50",
+        "company_current_sales": "10580446970.80",
+        "company_sales_change": "-2207744471.70",
+        "matched_prior_coverage": 0.9663739793360542,
+        "matched_current_coverage": 0.8739228304398243,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2207744471.70000034",
+        "reconciliation_residual": "-3.4E-7",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "exclude_description_variants",
+        "prior_year": 2011,
+        "current_year": 2012,
+        "comparison_label": "2012 vs 2011",
+        "matched_key_count": 203,
+        "current_only_key_count": 152,
+        "prior_only_key_count": 115,
+        "unresolved_key_count": 7,
+        "matched_prior_sales": "11471375807.70",
+        "matched_current_sales": "8542914304.76",
+        "quantity_effect": "-3073829916.45056811",
+        "realized_price_effect": "145368413.51056771",
+        "current_only_sales": "1333952806.76",
+        "prior_only_sales_effect": "-430015989.70",
+        "unresolved_current_sales": "703579859.28",
+        "unresolved_prior_sales": "886799645.10",
+        "unresolved_sales_change": "-183219785.82",
+        "included_prior_sales": "12788191442.50",
+        "included_current_sales": "10580446970.80",
+        "company_prior_sales": "12788191442.50",
+        "company_current_sales": "10580446970.80",
+        "company_sales_change": "-2207744471.70",
+        "matched_prior_coverage": 0.8970287830987795,
+        "matched_current_coverage": 0.8074247078915288,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2207744471.70000040",
+        "reconciliation_residual": "-4.0E-7",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "item_customer_pair",
+        "prior_year": 2011,
+        "current_year": 2012,
+        "comparison_label": "2012 vs 2011",
+        "matched_key_count": 520,
+        "current_only_key_count": 396,
+        "prior_only_key_count": 418,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "11399479540.36",
+        "matched_current_sales": "8861586938.85",
+        "quantity_effect": "-2747489062.55157612",
+        "realized_price_effect": "209596461.04157608",
+        "current_only_sales": "1718860031.95",
+        "prior_only_sales_effect": "-1388711902.14",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "12788191442.50",
+        "included_current_sales": "10580446970.80",
+        "company_prior_sales": "12788191442.50",
+        "company_current_sales": "10580446970.80",
+        "company_sales_change": "-2207744471.70",
+        "matched_prior_coverage": 0.8914067005968659,
+        "matched_current_coverage": 0.8375437222365253,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2207744471.70000004",
+        "reconciliation_residual": "-4E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "positive_sales_lines",
+        "prior_year": 2011,
+        "current_year": 2012,
+        "comparison_label": "2012 vs 2011",
+        "matched_key_count": 207,
+        "current_only_key_count": 147,
+        "prior_only_key_count": 118,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "12358175451.89",
+        "matched_current_sales": "9246494164.04",
+        "quantity_effect": "-3259295505.28800579",
+        "realized_price_effect": "147614217.43800546",
+        "current_only_sales": "1333952806.76",
+        "prior_only_sales_effect": "-430015990.61",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "12788191442.50",
+        "included_current_sales": "10580446970.80",
+        "company_prior_sales": "12788191442.50",
+        "company_current_sales": "10580446970.80",
+        "company_sales_change": "-2207744471.70",
+        "matched_prior_coverage": 0.9663739792648948,
+        "matched_current_coverage": 0.8739228304398243,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2207744471.70000033",
+        "reconciliation_residual": "-3.3E-7",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "base_item",
+        "prior_year": 2012,
+        "current_year": 2013,
+        "comparison_label": "2013 vs 2012",
+        "matched_key_count": 200,
+        "current_only_key_count": 210,
+        "prior_only_key_count": 162,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "9913513963.89",
+        "matched_current_sales": "9134867803.94",
+        "quantity_effect": "-138994729.63796852",
+        "realized_price_effect": "-639651430.31203155",
+        "current_only_sales": "425284840.18",
+        "prior_only_sales_effect": "-666933006.91",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "10580446970.80",
+        "included_current_sales": "9560152644.12",
+        "company_prior_sales": "10580446970.80",
+        "company_current_sales": "9560152644.12",
+        "company_sales_change": "-1020294326.68",
+        "matched_prior_coverage": 0.9369655167923806,
+        "matched_current_coverage": 0.9555148483490404,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-1020294326.68000007",
+        "reconciliation_residual": "-7E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "exclude_description_variants",
+        "prior_year": 2012,
+        "current_year": 2013,
+        "comparison_label": "2013 vs 2012",
+        "matched_key_count": 194,
+        "current_only_key_count": 210,
+        "prior_only_key_count": 162,
+        "unresolved_key_count": 6,
+        "matched_prior_sales": "9210979354.61",
+        "matched_current_sales": "8587821848.85",
+        "quantity_effect": "-27960999.27926725",
+        "realized_price_effect": "-595196506.48073278",
+        "current_only_sales": "425284840.18",
+        "prior_only_sales_effect": "-666933006.91",
+        "unresolved_current_sales": "547045955.09",
+        "unresolved_prior_sales": "702534609.28",
+        "unresolved_sales_change": "-155488654.19",
+        "included_prior_sales": "10580446970.80",
+        "included_current_sales": "9560152644.12",
+        "company_prior_sales": "10580446970.80",
+        "company_current_sales": "9560152644.12",
+        "company_sales_change": "-1020294326.68",
+        "matched_prior_coverage": 0.8705661849665268,
+        "matched_current_coverage": 0.8982933817622635,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-1020294326.68000003",
+        "reconciliation_residual": "-3E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "item_customer_pair",
+        "prior_year": 2012,
+        "current_year": 2013,
+        "comparison_label": "2013 vs 2012",
+        "matched_key_count": 449,
+        "current_only_key_count": 428,
+        "prior_only_key_count": 467,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "9140789205.66",
+        "matched_current_sales": "8610113965.78",
+        "quantity_effect": "42567256.63860536",
+        "realized_price_effect": "-573242496.51860543",
+        "current_only_sales": "950038678.34",
+        "prior_only_sales_effect": "-1439657765.14",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "10580446970.80",
+        "included_current_sales": "9560152644.12",
+        "company_prior_sales": "10580446970.80",
+        "company_current_sales": "9560152644.12",
+        "company_sales_change": "-1020294326.68",
+        "matched_prior_coverage": 0.863932235650046,
+        "matched_current_coverage": 0.9006251559252745,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-1020294326.68000007",
+        "reconciliation_residual": "-7E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "positive_sales_lines",
+        "prior_year": 2012,
+        "current_year": 2013,
+        "comparison_label": "2013 vs 2012",
+        "matched_key_count": 196,
+        "current_only_key_count": 207,
+        "prior_only_key_count": 158,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "9913513963.89",
+        "matched_current_sales": "9134867803.62",
+        "quantity_effect": "-152449513.40870066",
+        "realized_price_effect": "-626196646.86129947",
+        "current_only_sales": "425284840.50",
+        "prior_only_sales_effect": "-666933006.91",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "10580446970.80",
+        "included_current_sales": "9560152644.12",
+        "company_prior_sales": "10580446970.80",
+        "company_current_sales": "9560152644.12",
+        "company_sales_change": "-1020294326.68",
+        "matched_prior_coverage": 0.9369655167923806,
+        "matched_current_coverage": 0.9555148483155682,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-1020294326.68000013",
+        "reconciliation_residual": "-1.3E-7",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "base_item",
+        "prior_year": 2013,
+        "current_year": 2014,
+        "comparison_label": "2014 vs 2013",
+        "matched_key_count": 195,
+        "current_only_key_count": 112,
+        "prior_only_key_count": 215,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "9147926979.30",
+        "matched_current_sales": "7116323469.85",
+        "quantity_effect": "-2141608349.17341927",
+        "realized_price_effect": "110004839.72341931",
+        "current_only_sales": "421554524.55",
+        "prior_only_sales_effect": "-412225664.82",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "9560152644.12",
+        "included_current_sales": "7537877994.40",
+        "company_prior_sales": "9560152644.12",
+        "company_current_sales": "7537877994.40",
+        "company_sales_change": "-2022274649.72",
+        "matched_prior_coverage": 0.9568808490653606,
+        "matched_current_coverage": 0.944075172765707,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2022274649.71999996",
+        "reconciliation_residual": "4E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "exclude_description_variants",
+        "prior_year": 2013,
+        "current_year": 2014,
+        "comparison_label": "2014 vs 2013",
+        "matched_key_count": 186,
+        "current_only_key_count": 112,
+        "prior_only_key_count": 215,
+        "unresolved_key_count": 9,
+        "matched_prior_sales": "8599915548.85",
+        "matched_current_sales": "6647347229.47",
+        "quantity_effect": "-2062333223.79417631",
+        "realized_price_effect": "109764904.41417633",
+        "current_only_sales": "421554524.55",
+        "prior_only_sales_effect": "-412225664.82",
+        "unresolved_current_sales": "468976240.38",
+        "unresolved_prior_sales": "548011430.45",
+        "unresolved_sales_change": "-79035190.07",
+        "included_prior_sales": "9560152644.12",
+        "included_current_sales": "7537877994.40",
+        "company_prior_sales": "9560152644.12",
+        "company_current_sales": "7537877994.40",
+        "company_sales_change": "-2022274649.72",
+        "matched_prior_coverage": 0.899558392944636,
+        "matched_current_coverage": 0.8818592227691152,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2022274649.71999998",
+        "reconciliation_residual": "2E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "item_customer_pair",
+        "prior_year": 2013,
+        "current_year": 2014,
+        "comparison_label": "2014 vs 2013",
+        "matched_key_count": 423,
+        "current_only_key_count": 215,
+        "prior_only_key_count": 454,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "8514740732.92",
+        "matched_current_sales": "6826825494.85",
+        "quantity_effect": "-1777126794.50246123",
+        "realized_price_effect": "89211556.43246129",
+        "current_only_sales": "711052499.55",
+        "prior_only_sales_effect": "-1045411911.20",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "9560152644.12",
+        "included_current_sales": "7537877994.40",
+        "company_prior_sales": "9560152644.12",
+        "company_current_sales": "7537877994.40",
+        "company_sales_change": "-2022274649.72",
+        "matched_prior_coverage": 0.8906490356257037,
+        "matched_current_coverage": 0.9056694072153662,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2022274649.71999994",
+        "reconciliation_residual": "6E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      },
+      {
+        "scenario": "positive_sales_lines",
+        "prior_year": 2013,
+        "current_year": 2014,
+        "comparison_label": "2014 vs 2013",
+        "matched_key_count": 191,
+        "current_only_key_count": 116,
+        "prior_only_key_count": 212,
+        "unresolved_key_count": 0,
+        "matched_prior_sales": "9147926979.30",
+        "matched_current_sales": "7116323466.77",
+        "quantity_effect": "-2130346045.52386450",
+        "realized_price_effect": "98742532.99386454",
+        "current_only_sales": "421554527.63",
+        "prior_only_sales_effect": "-412225664.82",
+        "unresolved_current_sales": "0.00",
+        "unresolved_prior_sales": "0.00",
+        "unresolved_sales_change": "0.00",
+        "included_prior_sales": "9560152644.12",
+        "included_current_sales": "7537877994.40",
+        "company_prior_sales": "9560152644.12",
+        "company_current_sales": "7537877994.40",
+        "company_sales_change": "-2022274649.72",
+        "matched_prior_coverage": 0.9568808490653606,
+        "matched_current_coverage": 0.9440751723571039,
+        "excluded_prior_sales": "0.00",
+        "excluded_current_sales": "0.00",
+        "bridge_component_sum": "-2022274649.71999996",
+        "reconciliation_residual": "4E-8",
+        "bridge_basis": "Conditional: reported quantity basis assumed constant within each item code; source units unverified"
+      }
+    ]
+  },
+  "activity_distribution": {
+    "query": "SELECT * FROM decline_distribution WHERE contributor_type='customer' ORDER BY current_year",
+    "results": [
+      {
+        "prior_year": 2011,
+        "current_year": 2012,
+        "comparison_label": "2012 vs 2011",
+        "contributor_type": "customer",
+        "contributors_in_either_period": 55,
+        "declining_contributors": 37,
+        "growing_contributors": 17,
+        "prior_only_contributors": 16,
+        "current_only_contributors": 7,
+        "gross_losses": "-2755839715.34",
+        "gross_gains": "548095243.64",
+        "four_largest_losses": "-1678988188.20",
+        "company_sales_change": "-2207744471.70"
+      },
+      {
+        "prior_year": 2012,
+        "current_year": 2013,
+        "comparison_label": "2013 vs 2012",
+        "contributor_type": "customer",
+        "contributors_in_either_period": 61,
+        "declining_contributors": 33,
+        "growing_contributors": 27,
+        "prior_only_contributors": 13,
+        "current_only_contributors": 22,
+        "gross_losses": "-1601851204.48",
+        "gross_gains": "581556877.80",
+        "four_largest_losses": "-1017787447.48",
+        "company_sales_change": "-1020294326.68"
+      },
+      {
+        "prior_year": 2013,
+        "current_year": 2014,
+        "comparison_label": "2014 vs 2013",
+        "contributor_type": "customer",
+        "contributors_in_either_period": 59,
+        "declining_contributors": 40,
+        "growing_contributors": 18,
+        "prior_only_contributors": 22,
+        "current_only_contributors": 11,
+        "gross_losses": "-2346972811.46",
+        "gross_gains": "324698161.74",
+        "four_largest_losses": "-1554757721.50",
+        "company_sales_change": "-2022274649.72"
+      }
+    ]
+  },
+  "jan_nov_account_priority_sensitivity": {
+    "query": "WITH y AS (SELECT document_year AS year,customer_code,max(customer_display_name) AS name,sum(reported_sales_amount) AS sales FROM analysis_lines WHERE document_month<=11 GROUP BY document_year,customer_code), p AS (SELECT coalesce(c.customer_code,p.customer_code) AS customer_code,coalesce(c.name,p.name) AS name,coalesce(c.sales,0)-coalesce(p.sales,0) AS change FROM (SELECT * FROM y WHERE year=2013) p FULL JOIN (SELECT * FROM y WHERE year=2014) c USING(customer_code)) SELECT *,change/sum(change) OVER() AS net_change_share FROM p ORDER BY change LIMIT 6",
+    "results": [
+      {
+        "customer_code": "CIQ0001",
+        "name": "Queensway Aluminium Co.Ltd",
+        "change": "-444854045.00",
+        "net_change_share": 0.30474633954325697
+      },
+      {
+        "customer_code": "CIA0013",
+        "name": "Asaba Aluminium Company",
+        "change": "-246160100.50",
+        "net_change_share": 0.1686314655607442
+      },
+      {
+        "customer_code": "CIB0004",
+        "name": "Borno Aluminium Company Ltd",
+        "change": "-243385029.00",
+        "net_change_share": 0.16673040859363086
+      },
+      {
+        "customer_code": "CIP0001",
+        "name": "P.G.N Limited",
+        "change": "-195113747.00",
+        "net_change_share": 0.13366226712138615
+      },
+      {
+        "customer_code": "CIT0008",
+        "name": "Tower Galvanized  Products",
+        "change": "-79068172.00",
+        "net_change_share": 0.05416548700007132
+      },
+      {
+        "customer_code": "CIA0004",
+        "name": "Tower  Roofing System Ltd Akure Plant",
+        "change": "-71275302.00",
+        "net_change_share": 0.048826997592750186
+      }
+    ]
+  },
+  "december_major_accounts": {
+    "query": "SELECT p.customer_code,p.customer_display_name,count(l.source_row_id) AS december_2014_lines FROM account_review_priorities p LEFT JOIN analysis_lines l ON l.customer_code=p.customer_code AND l.document_year=2014 AND l.document_month=12 WHERE p.year=2014 AND p.priority_review_rank<=4 GROUP BY p.customer_code,p.customer_display_name ORDER BY p.customer_code",
+    "results": [
+      {
+        "customer_code": "CIA0013",
+        "customer_display_name": "Asaba Aluminium Company",
+        "december_2014_lines": 0
+      },
+      {
+        "customer_code": "CIB0004",
+        "customer_display_name": "Borno Aluminium Company Ltd",
+        "december_2014_lines": 0
+      },
+      {
+        "customer_code": "CIP0001",
+        "customer_display_name": "P.G.N Limited",
+        "december_2014_lines": 0
+      },
+      {
+        "customer_code": "CIQ0001",
+        "customer_display_name": "Queensway Aluminium Co.Ltd",
+        "december_2014_lines": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+check_name,actual_value,expected_rule,status,severity
+source_hash_matches_reviewed_workbook,80e329dcc1ac78bf572440f876a4a3884145165ce79be2d3c6c8510312fcdd37,80e329dcc1ac78bf572440f876a4a3884145165ce79be2d3c6c8510312fcdd37,PASS,critical
+source_to_prepared_rows,77895,77895,PASS,critical
+xml_to_reader_rows,77895,77895,PASS,critical
+xml_sales_cell_count,77895,77895,PASS,critical
+source_to_prepared_sales,51108696919.32,51108696919.32,PASS,critical
+xml_to_reader_sales,6.2505983E-10,absolute difference <= 0.01 source currency units,PASS,critical
+source_row_ids_unique,77895,77895,PASS,critical
+source_row_ids_preserved,77895,77895,PASS,critical
+empty_trailing_columns,0,0,PASS,critical
+no_source_formulas,0,0,PASS,critical
+required_dates_resolved,0,0,PASS,critical
+normalized_date_matches_source_month,0,0,PASS,critical
+customer_code_not_blank,0,0,PASS,critical
+customer_code_preserved,77895,77895,PASS,critical
+item_code_not_blank,0,0,PASS,critical
+item_code_preserved,77895,77895,PASS,critical
+batch_number_not_blank,0,0,PASS,critical
+batch_number_preserved,77895,77895,PASS,critical
+document_number_not_blank,0,0,PASS,critical
+document_number_preserved,77895,77895,PASS,critical
+sales_price_quantity_arithmetic,0,0 lines with absolute difference > 0.01,PASS,critical
+thickness_suffixes_preserved,280,280,PASS,critical
+primary_calendar_months_observed,48,48 (2011–2014); not a completeness guarantee,PASS,critical
+item_cost_nonnegative,0,0,PASS,critical
+reported_quantity_nonnegative,0,0,PASS,critical
+reported_sales_amount_nonnegative,0,0,PASS,critical
+sales_price_nonnegative,0,0,PASS,critical
+vat_value_nonnegative,0,0,PASS,critical
+width_nonnegative,0,0,PASS,critical
+reported_quantity_positive,0,0,PASS,critical

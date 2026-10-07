@@ -1,0 +1,488 @@
+{
+  "critical_checks": 47,
+  "critical_failures": 0,
+  "export_schemas": {
+    "account_year_summary": [
+      {
+        "name": "year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "prior_year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "customer_code",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "customer_display_name",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "first_observed_date",
+        "type": "DATE"
+      },
+      {
+        "name": "observed_current",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "observed_prior",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "sales_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "sales_change_ratio",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "revenue_rank",
+        "type": "BIGINT"
+      },
+      {
+        "name": "prior_revenue_rank",
+        "type": "BIGINT"
+      },
+      {
+        "name": "revenue_share",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "prior_revenue_share",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "company_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "top_one_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "top_five_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "top_one_share",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "top_five_share",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "company_prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_sales_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_change_ratio",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "comparison_label",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "comparison_activity_status",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "percentage_change_basis",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "is_priority_review",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "all_account_loss_rank",
+        "type": "BIGINT"
+      },
+      {
+        "name": "contribution_to_net_change_ratio",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "priority_review_rank",
+        "type": "BIGINT"
+      }
+    ],
+    "price_quantity_bridge": [
+      {
+        "name": "prior_year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "current_year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "comparison_label",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "component_order",
+        "type": "INTEGER"
+      },
+      {
+        "name": "component_code",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "component_label",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "component_amount",
+        "type": "DECIMAL(28,8)"
+      },
+      {
+        "name": "company_prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_sales_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "matched_item_count",
+        "type": "BIGINT"
+      },
+      {
+        "name": "current_only_item_count",
+        "type": "BIGINT"
+      },
+      {
+        "name": "prior_only_item_count",
+        "type": "BIGINT"
+      },
+      {
+        "name": "unresolved_item_count",
+        "type": "BIGINT"
+      },
+      {
+        "name": "matched_prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "matched_current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "matched_prior_coverage",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "matched_current_coverage",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "unresolved_prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "unresolved_current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "excluded_prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "excluded_current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "reconciliation_residual",
+        "type": "DECIMAL(38,8)"
+      },
+      {
+        "name": "bridge_basis",
+        "type": "VARCHAR"
+      }
+    ],
+    "revenue_drivers": [
+      {
+        "name": "prior_year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "current_year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "comparison_label",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "contributor_type",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "contributor_key",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "contributor_label",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "is_other",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "underlying_contributor_count",
+        "type": "BIGINT"
+      },
+      {
+        "name": "prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "sales_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_prior_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_current_sales",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "company_sales_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "gross_negative_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "gross_positive_change",
+        "type": "DECIMAL(38,2)"
+      },
+      {
+        "name": "sales_change_ratio",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "prior_company_share",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "current_company_share",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "contribution_to_net_change_ratio",
+        "type": "DOUBLE"
+      },
+      {
+        "name": "display_order",
+        "type": "BIGINT"
+      }
+    ],
+    "sales_lines": [
+      {
+        "name": "source_row_id",
+        "type": "INTEGER"
+      },
+      {
+        "name": "source_line_number",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "coil_pattern",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "product_group",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "product",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "document_number",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "source_document_date",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "source_date_kind",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "source_date_number_format",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "source_week_label",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "source_month",
+        "type": "INTEGER"
+      },
+      {
+        "name": "customer_group",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "customer_code",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "customer_name",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "item_code",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "item_description",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "thickness_code",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "width",
+        "type": "DECIMAL(18,4)"
+      },
+      {
+        "name": "source_colour",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "batch_number",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "item_cost",
+        "type": "DECIMAL(18,4)"
+      },
+      {
+        "name": "sales_price",
+        "type": "DECIMAL(18,4)"
+      },
+      {
+        "name": "reported_quantity",
+        "type": "DECIMAL(18,4)"
+      },
+      {
+        "name": "vat_value",
+        "type": "DECIMAL(18,4)"
+      },
+      {
+        "name": "reported_sales_amount",
+        "type": "DECIMAL(20,2)"
+      },
+      {
+        "name": "document_date",
+        "type": "DATE"
+      },
+      {
+        "name": "document_year",
+        "type": "INTEGER"
+      },
+      {
+        "name": "document_month",
+        "type": "INTEGER"
+      },
+      {
+        "name": "document_day",
+        "type": "INTEGER"
+      },
+      {
+        "name": "is_primary_window",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "date_corrected",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "date_normalization_rule",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "date_issue",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "colour",
+        "type": "VARCHAR"
+      },
+      {
+        "name": "customer_display_name",
+        "type": "VARCHAR"
+      }
+    ]
+  },
+  "exports": {
+    "account_year_summary": {
+      "rows": 336,
+      "sha256": "f9c4db1654b21929211f2275fbad504c1ce01ea15811fb740db600db786eece2"
+    },
+    "price_quantity_bridge": {
+      "rows": 15,
+      "sha256": "45bd879b321433636892e03ef4404270c65eecb0d0e5def310564367ecd13d59"
+    },
+    "revenue_drivers": {
+      "rows": 192,
+      "sha256": "0565d185bca8a0c6b05c3734d5633c19fb5b163a0031148af5cedabe30483b30"
+    },
+    "sales_lines": {
+      "rows": 77895,
+      "sha256": "e70c045f4c36e2b07882942edbeb77fb61f22d8cc36d30f4aa0e68e41bd5e0f8"
+    }
+  },
+  "interpretation_limits": 1,
+  "prepared_sha256": "c11d452a928381d5c58c4176dfd18fcc18b8e2df430784452d173e00d888c253",
+  "runtime": {
+    "duckdb": "1.5.6",
+    "python": "3.12.14"
+  },
+  "sql_sha256": {
+    "01_load.sql": "312549d35643635ae8627f509d4d49d355226ee0a86a45e90a87289c74beb9c5",
+    "02_quality_checks.sql": "c02b6664a29362275689b6fcc4ba2f4434e350c20ea0c64421c773fa1ee705e2",
+    "03_revenue_drivers.sql": "3a005c818fce84eb83ff90aed6f4e818e82dadc03501c3f77790c57cbb241016",
+    "04_price_quantity.sql": "869326b9d99b0e6636d1e8651f261fd0dfccb2019ecfa3f3c267dfa49176d84d",
+    "05_account_performance.sql": "dfff2d73b78ddcc11484d8e0fef84a9260c1d4defaa0d0abf2f53a54c4d34d7f",
+    "06_exports.sql": "bb94e782981735600a7ad427bce058f245f3175d76e7b1a82f0930138999bc4e"
+  },
+  "stage": 2,
+  "status": "PASS"
+}
